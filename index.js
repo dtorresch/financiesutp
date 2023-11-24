@@ -13,14 +13,14 @@ app.use(function(req, res, next) {
 
 app.use(bodyParser.json())
 
-const PUERTO = 3000
+const PUERTO = 3306
 
 const conexion = mysql.createConnection(
     {
-        host:'localhost',
-        database: 'pruebas',
-        user: 'root',
-        password: ''
+        host:'https://db4free.net/phpMyAdmin',
+        database: 'pruebas001',
+        user: 'pruebas001',
+        password: 'T^}7]6Ls%P-Y"nV'
     }
 )
 
