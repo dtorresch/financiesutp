@@ -45,9 +45,9 @@ class MysqlManager {
         if (self::$pdo == null) {
 
             // Parámetros de PDO
-            $dsn = sprintf('mysql:dbname=%s; host=%s', prueba001, db4free.net);
-            $username = prueba001;
-            $passwd = T^}7]6Ls%P-Y"nV;
+            $dsn = sprintf('mysql:dbname=%s; host=%s', MYSQL_DATABASE_NAME, MYSQL_HOST);
+            $username = MYSQL_USERNAME;
+            $passwd = MYSQL_PASSWORD;
             $options = array(
                 PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
