@@ -17,7 +17,7 @@ const PUERTO = 3306
 
 const conexion = mysql.createConnection(
     {
-        host:'https://db4free.net/phpMyAdmin',
+        host:'db4free.net',
         database: 'pruebas001',
         user: 'pruebas001',
         password: 'T^}7]6Ls%P-Y"nV'
