@@ -1,26 +1,22 @@
-// app.js
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Ruta de autenticación
+// Definir una ruta de inicio de sesión simple
 app.post('/api/login', (req, res) => {
     const { username, password } = req.body;
 
-    // Realizar la lógica de autenticación (ejemplo: verificar en una base de datos)
-
-    if (username === 'usuario' && password === 'contrasena') {
-        res.status(200).json({ message: 'Autenticación exitosa' });
+    // Aquí deberías verificar las credenciales en tu base de datos
+    if (username === 'usuario' && password === 'contraseña') {
+        res.json({ message: 'Inicio de sesión exitoso' });
     } else {
-        res.status(401).json({ message: 'Credenciales incorrectas' });
+        res.status(401).json({ message: 'Credenciales inválidas' });
     }
 });
 
 app.listen(port, () => {
-    console.log(`Servidor escuchando en el puerto ${port}`);
+    console.log(`Servidor iniciado en el puerto ${port}`);
 });
-
